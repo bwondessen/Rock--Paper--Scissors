@@ -50,6 +50,9 @@ function showResults(userOption) {
     }
 
 };
+function resetGame() {
+
+};
 
 resetGameBtn.addEventListener("click", resetGame);
 
