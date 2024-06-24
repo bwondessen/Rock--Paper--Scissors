@@ -16,6 +16,18 @@ function hasPlayerWonTheRound(player, computer) {
 }
 function getRoundResults(userOption) {
     const computerResult = getRandomComputerResult();
+
+    if (hasPlayerWonTheRound(userOption, computerResult)) {
+        userOption += 1;
+
+        return `Player wins! ${userOption} beats ${computerResult}`;
+    } else if (userOption == computerResult) {
+        return `It's a tie! Both chose ${userOption}`;
+    } else {
+        computerResult += 1;
+
+        return `Computer wins! ${computerResult} beats ${userOption}`;
+    }
 }
 
 console.log(getRoundResults("Rock"));
